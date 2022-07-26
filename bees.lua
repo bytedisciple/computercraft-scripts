@@ -48,7 +48,7 @@ end
 shouldContinue = true
     
 while shouldContinue do
-      local indexBestChicken = redstone.getAnalogInput("bottom")
+      local indexBestChicken = redstone.getAnalogInput("back")
       print(indexBestChicken)
       turtle.select(indexBestChicken)
       t = turtle.drop()

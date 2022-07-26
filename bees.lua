@@ -9,7 +9,7 @@ while true do
     --Wait for current round to be finished breeding
     while redstone.getAnalogInput("right") == 0 do
         os.sleep(1)
-    then
+    end
     
     -- Break and replace the breeder
     turtle.dig("right")
@@ -28,7 +28,7 @@ while true do
         end
     end
 
-    if ~placed then
+    if not placed then
         print("cannot find breeder!")
         os.exit(1)
     end

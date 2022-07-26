@@ -15,6 +15,7 @@ os.sleep(1)
 --If we have seeds, place them
 for i=1, turtleslots
 do
+    print(i)
     local item = turtle.ItemDetails(i)
     if item then
       print(item.name)

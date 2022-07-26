@@ -19,7 +19,7 @@ do
     local item = turtle.getItemDetail(i)
     if item then
       print(item.name)
-      if item.name == "Seeds" then
+      if item.name == "minecraft:wheat_seeds" then
         turtle.select(i)
         turtle.drop()
         break

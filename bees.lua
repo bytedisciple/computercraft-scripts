@@ -16,7 +16,7 @@ os.sleep(1)
 for i=1, turtleslots
 do
     print(i)
-    local item = turtle.ItemDetails(i)
+    local item = turtle.getItemDetail(i)
     if item then
       print(item.name)
       if item.name == "Seeds" then

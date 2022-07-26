@@ -1,18 +1,18 @@
 turtleslots = 14
 
 
-//Await input that breeding is complete
+--Await input that breeding is complete
 
 
-// Break and replace the breeder
+-- Break and replace the breeder
 turtle.select(1)
 turtle.dig("right")
 turtle.place()
 
-//Wait a moment for items to return to turtles inv
+--Wait a moment for items to return to turtles inv
 os.sleep(1)
 
-//If we have seeds, place them
+--If we have seeds, place them
 for i=1, turtleslots, +1
 do
     local item = turtle.ItemDetails(i)

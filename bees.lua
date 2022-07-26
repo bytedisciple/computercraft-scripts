@@ -1,4 +1,4 @@
-turtleslots = 14
+turtleslots = 16
 
 
 --Await input that breeding is complete
@@ -13,7 +13,7 @@ turtle.place()
 os.sleep(1)
 
 --If we have seeds, place them
-for i=1, turtleslots, +1
+for i=1, turtleslots
 do
     local item = turtle.ItemDetails(i)
     if item then
@@ -22,6 +22,7 @@ do
         turtle.select(i)
         turtle.drop()
         break
+      end
     end
 end
   

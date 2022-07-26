@@ -61,7 +61,7 @@ for i=1, turtleslots
 do
     local item = turtle.getItemDetail(i)
     if item then
-      if item.name !== "minecraft:wheat_seeds" and item.name !== "roost:breeder" then
+      if item.name ~= "minecraft:wheat_seeds" and item.name ~= "roost:breeder" then
         turtle.select(i)
         turtle.dropDown()
         break

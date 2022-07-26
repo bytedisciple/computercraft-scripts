@@ -7,6 +7,7 @@ turtleslots = 16
 while true do
     
     --Wait for current round to be finished breeding
+    print("Awaiting signal to reset breeder")
     while redstone.getAnalogInput("right") == 0 do
         os.sleep(1)
     end

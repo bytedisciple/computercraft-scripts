@@ -7,7 +7,19 @@ turtleslots = 16
 -- Break and replace the breeder
 turtle.select(1)
 turtle.dig("right")
-turtle.place()
+for i=1, turtleslots
+do
+    local item = turtle.getItemDetail(i)
+    if item then
+      print(item.name)
+      if item.name == "roost:breeder" then
+        turtle.select(i)
+        turtle.place()
+        break
+      end
+    end
+end
+
 
 --Wait a moment for items to return to turtles inv
 os.sleep(1)

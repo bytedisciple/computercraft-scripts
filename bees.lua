@@ -5,7 +5,6 @@ turtleslots = 16
 
 
 -- Break and replace the breeder
-turtle.select(1)
 turtle.dig("right")
 for i=1, turtleslots
 do
@@ -18,6 +17,8 @@ do
         break
       end
     end
+    print("cannot find breeder!")
+    os.exit(1)
 end
 
 
@@ -49,4 +50,16 @@ while shouldContinue do
       print(t)
       shouldContinue = t
       os.sleep(1)
+end
+
+for i=1, turtleslots
+do
+    local item = turtle.getItemDetail(i)
+    if item then
+      if item.name != "minecraft:wheat_seeds" and item.name != "roost:breeder" then
+        turtle.select(i)
+        turtle.dropDown()
+        break
+      end
+    end
 end

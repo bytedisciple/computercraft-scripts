@@ -36,4 +36,5 @@ while shouldContinue do
       t = turtle.drop()
       print(t)
       shouldContinue = t
+      os.sleep(1)
 end

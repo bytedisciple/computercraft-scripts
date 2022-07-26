@@ -8,7 +8,7 @@ while true do
     
     --Wait for current round to be finished breeding
     while redstone.getAnalogInput("right") == 0 do
-        sleep(1)
+        os.sleep(1)
     then
     
     -- Break and replace the breeder
